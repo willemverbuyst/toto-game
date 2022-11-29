@@ -17,9 +17,7 @@ flowchart LR
   G[postman tests]
   H[micro-service with go]
   I[(mongo database)]
-  II[(mongo database)]
   J[seed with docker]
-  JJ[seed with docker]
   K[api tests]
   L[service tests]
   subgraph docker
@@ -29,8 +27,6 @@ flowchart LR
   I
   J-->I
   I<-->H
-  JJ-->II
-  II<-->F
   K-->F
   L-->H
   end
