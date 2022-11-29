@@ -20,7 +20,6 @@ flowchart LR
   J[seed with docker]
   K[api tests]
   L[service tests]
-  M[server tests]
   subgraph docker
   B
   F
@@ -31,7 +30,6 @@ flowchart LR
   K-->F
   L-->H
   end
-  M-->C
   B<-->C
   F<-->C
   A-->C
