@@ -34,3 +34,15 @@ flowchart LR
   H-->D
   G-->C
 ```
+
+[toto-game-client](https://github.com/willemverbuyst/toto-game-client)
+
+[toto-game-server](https://github.com/willemverbuyst/toto-game-server)
+
+[toto-game-soccer-api](https://github.com/willemverbuyst/toto-game-soccer-api)
+
+[toto-game-rules-service](https://github.com/willemverbuyst/toto-game-soccer-api)
+
+[toto-game-postman](https://github.com/willemverbuyst/toto-game-postman)
+
+[toto-game-e2e](https://github.com/willemverbuyst/toto-game-e2e)
