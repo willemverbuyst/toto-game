@@ -10,7 +10,7 @@ This is a refactor/extension of/on a project started/created by fellow student [
 flowchart LR
   A[seed]
   B[(postgres database)]
-  C[nodejs-server]
+  C(((nodejs-server)))
   D(((react-client)))
   E[puppeteer e2e]
   F[api with python]
@@ -18,6 +18,9 @@ flowchart LR
   H[micro-service with go]
   I[(mongo database)]
   J[seed with docker]
+  K[api tests]
+  L[service tests]
+  M[server tests]
   subgraph docker
   B
   F
@@ -25,14 +28,17 @@ flowchart LR
   I
   J-->I
   I<-->H
+  K-->F
+  L-->H
   end
+  M-->C
   B<-->C
   F<-->C
   A-->C
-  D<-->C
-  E-->D
   H-->D
+  E-->D
   G-->C
+  D<-->C
 ```
 
 [toto-game-client](https://github.com/willemverbuyst/toto-game-client)
