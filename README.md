@@ -8,15 +8,15 @@ This is a refactor/extension of/on a project started/created by fellow student [
 
 ```mermaid
 flowchart LR
-  A[seed]
-  B[(postgres database)]
-  C(((nodejs-server)))
-  D(((react-client)))
-  E[puppeteer e2e]
-  F[api with python]
-  G[postman tests]
-  H[micro-service with go]
-  I[(mongo database)]
+  A[bash: dummy data seed]
+  B[(database: postgres)]
+  C(((server: nodejs)))
+  D(((client: react)))
+  E[e2e-tests: puppeteer]
+  F[soccer-api: micro-service with python]
+  G[server-tests: postman]
+  H[rules-service: micro-service with go]
+  I[(database: mongo)]
   J[seed with docker]
   K[api tests]
   L[service tests]
