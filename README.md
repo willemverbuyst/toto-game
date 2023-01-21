@@ -1,3 +1,6 @@
+> **Warning**
+> Project is not maintained anymore
+
 ## What is this?
 
 This is a refactor/extension of/on a project started/created by fellow student [Michelle Pesch](https://github.com/mipes4/sportsbetting_fe) at Codaisseur.
