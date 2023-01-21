@@ -17,8 +17,8 @@ const HorizontalBarChart: React.FC<IProps> = ({
   goto,
 }: IProps): ReactElement => (
   <Box>
-    <Grid container direction="row" justify="center" alignItems="center">
-      <Grid item xs={8} md={6} container justify="center">
+    <Grid container direction="row" justifyContent="center" alignItems="center">
+      <Grid item xs={8} md={6} container justifyContent="center">
         <HorizontalBar
           data={chartData}
           options={chartOptions}

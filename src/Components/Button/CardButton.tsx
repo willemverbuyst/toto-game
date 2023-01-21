@@ -14,7 +14,7 @@ const CardButton: React.FC<IProps> = ({
   handleClick,
   variant = 'contained',
 }: IProps): ReactElement => (
-  <Grid item xs={2} container justify="center">
+  <Grid item xs={2} container justifyContent="center">
     <Button
       variant={variant}
       size="small"

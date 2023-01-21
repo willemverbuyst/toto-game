@@ -17,8 +17,8 @@ const BarChart: React.FC<IProps> = ({
   goto,
 }: IProps): ReactElement => (
   <Box mt="4rem">
-    <Grid container direction="row" justify="center" alignItems="center">
-      <Grid item xs={8} md={6} container justify="center">
+    <Grid container direction="row" justifyContent="center" alignItems="center">
+      <Grid item xs={8} md={6} container justifyContent="center">
         <Bar
           data={chartData}
           options={chartOptions}

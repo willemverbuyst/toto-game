@@ -20,7 +20,7 @@ const TableComponent: React.FC<IProps> = ({
   const classes = useStyles()
 
   return (
-    <Grid container justify="center">
+    <Grid container justifyContent="center">
       <Grid item xs={10} className={classes.table}>
         <TableContainer>
           <Table aria-label="simple table">

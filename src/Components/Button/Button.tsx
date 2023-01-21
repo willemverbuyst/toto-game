@@ -18,7 +18,7 @@ const ButtonComponent: React.FC<IProps> = ({
   const btnVariant = useMediaQuery(theme.breakpoints.up('sm'))
 
   return (
-    <Grid container justify="center">
+    <Grid container justifyContent="center">
       <Grid item xs={12} md={3}>
         <Button
           fullWidth

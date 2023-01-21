@@ -30,7 +30,7 @@ const LogoComponent: React.FC<IProps> = ({
   const className = size === 'small' ? classes.small : classes.medium
 
   return (
-    <Grid item xs={1} container justify="center" alignItems="center">
+    <Grid item xs={1} container justifyContent="center" alignItems="center">
       <img className={className} alt={alt} src={source} />
     </Grid>
   )

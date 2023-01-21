@@ -30,7 +30,7 @@ const TextComponent: React.FC<IProps> = ({
   variant = 'inherit',
   color = 'inherit',
 }: IProps): ReactElement => (
-  <Grid item xs={xs} container justify={justify} alignItems="center">
+  <Grid item xs={xs} container justifyContent={justify} alignItems="center">
     <Typography variant={variant} color={color}>
       {content}
     </Typography>

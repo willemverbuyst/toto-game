@@ -62,9 +62,15 @@ const MatchCardBottom: React.FC<IProps> = ({
     ) : null
 
   return (
-    <Grid item xs={12} container justify="center">
+    <Grid item xs={12} container justifyContent="center">
       {!showInput ? (
-        <Grid item xs={12} container justify="center" alignItems="center">
+        <Grid
+          item
+          xs={12}
+          container
+          justifyContent="center"
+          alignItems="center"
+        >
           <Typography variant="overline" color="textSecondary">
             {prediction}
           </Typography>

@@ -25,14 +25,14 @@ const PaginationComponent: React.FC<IProps> = ({
   return (
     <>
       <Grid item xs={12}>
-        <Grid container justify="center">
+        <Grid container justifyContent="center">
           <Typography variant="overline" gutterBottom>
             {label}
           </Typography>
         </Grid>
       </Grid>
       <Grid item xs={12}>
-        <Grid container justify="center">
+        <Grid container justifyContent="center">
           <Pagination
             size={pagVariant ? 'small' : 'medium'}
             page={page}

@@ -32,7 +32,7 @@ const AvatarLargeComponent: React.FC<IProps> = ({
   const classes = useStyles()
 
   return (
-    <Grid container justify="center" className={classes.container}>
+    <Grid container justifyContent="center" className={classes.container}>
       <Avatar alt={alt} src={source} className={classes.avatar} />
     </Grid>
   )

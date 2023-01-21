@@ -37,9 +37,9 @@ const UserDisplay: React.FC = (): ReactElement => {
   const name = user ? UTILS.replaceUnderscore(user.userName) : 'Who are you?'
 
   return (
-    <Grid container justify="center">
+    <Grid container justifyContent="center">
       <Grid container className={classes.wrapper}>
-        <Grid container justify="center">
+        <Grid container justifyContent="center">
           <Typography className={classes.userName}>{name}</Typography>
         </Grid>
         {user ? (

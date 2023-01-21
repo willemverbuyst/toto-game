@@ -10,7 +10,7 @@ const AccordionDetails = withStyles((theme: Theme) => ({
 }))(MuiAccordionDetails)
 
 interface IProps {
-  answers: Array<{ id: number; text: string }>
+  answers: Array<{ order: number; text: string }>
 }
 
 const AccordionAnswers: React.FC<IProps> = ({
@@ -19,7 +19,7 @@ const AccordionAnswers: React.FC<IProps> = ({
   <AccordionDetails>
     <List>
       {answers.map((answer) => (
-        <ListItem key={answer.id}>
+        <ListItem key={answer.order}>
           <ListItemText primary={answer.text} />
         </ListItem>
       ))}

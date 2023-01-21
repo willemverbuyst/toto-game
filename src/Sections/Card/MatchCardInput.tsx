@@ -58,10 +58,10 @@ const MatchCardInput: React.FC<IProps> = ({
   }
 
   return (
-    <Grid item xs={12} container justify="center">
+    <Grid item xs={12} container justifyContent="center">
       <CardButton caption="Cancel" color="secondary" handleClick={hideInput} />
 
-      <Grid item xs={8} container justify="center">
+      <Grid item xs={8} container justifyContent="center">
         <NumberField defaultValue={pGoalsHome} onChange={handleGoalsHomeTeam} />
         &nbsp;&nbsp;-&nbsp;&nbsp;
         <NumberField defaultValue={pGoalsAway} onChange={handleGoalsAwayTeam} />

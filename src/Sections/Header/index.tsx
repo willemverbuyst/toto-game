@@ -10,7 +10,7 @@ const Header: React.FC = (): ReactElement => {
   const token = useSelector(selectToken)
 
   return (
-    <Grid container justify="center">
+    <Grid container justifyContent="center">
       {token ? <NavIcons /> : <Brand />}
     </Grid>
   )

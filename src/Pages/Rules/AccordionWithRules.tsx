@@ -68,13 +68,13 @@ const AccordionWithRules: React.FC = (): ReactElement => {
   }, [])
 
   return (
-    <Grid container justify="center" className={classes.content}>
+    <Grid container justifyContent="center" className={classes.content}>
       {isLoading ? (
         <ProgressComponent />
       ) : rules.length ? (
         <Grid item xs={12} md={8}>
           {rules.map((rule) => (
-            <Accordion key={rule.id}>
+            <Accordion key={rule.Id}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"

@@ -1,10 +1,10 @@
 export interface Answer {
-  id: number
+  order: number
   text: string
 }
 
 export interface Rule {
-  id: number
+  Id: number
   question: string
   answers: Answer[]
 }

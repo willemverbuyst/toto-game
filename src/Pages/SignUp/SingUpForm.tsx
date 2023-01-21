@@ -57,7 +57,7 @@ const SignUpForm: React.FC<IProps> = ({ teams }: IProps): ReactElement => {
   }
 
   return (
-    <Grid container justify="center">
+    <Grid container justifyContent="center">
       <Grid item xs={12} sm={8} md={6} lg={4} className={classes.paper}>
         <form className={classes.form} onSubmit={handleSubmit(submitForm)}>
           <Grid container>

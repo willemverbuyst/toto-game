@@ -32,7 +32,14 @@ const TextComponent: React.FC<IProps> = ({
 }: IProps): ReactElement => {
   const classes = useStyles()
   return (
-    <Grid item xs={xs} sm={sm} container justify={justify} alignItems="center">
+    <Grid
+      item
+      xs={xs}
+      sm={sm}
+      container
+      justifyContent={justify}
+      alignItems="center"
+    >
       <Typography variant="h4" className={classes.text}>
         {content}
       </Typography>
