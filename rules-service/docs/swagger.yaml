@@ -1,0 +1,222 @@
+definitions:
+  models.Answer:
+    properties:
+      order:
+        example: 1
+        type: integer
+      text:
+        example: 12 o'clock
+        type: string
+    required:
+    - text
+    type: object
+  models.Rule:
+    properties:
+      answers:
+        items:
+          $ref: '#/definitions/models.Answer'
+        type: array
+      id:
+        example: 634f787edc90bf2b7c868153
+        type: string
+      order:
+        example: 1
+        type: integer
+      question:
+        example: What time is it?
+        type: string
+    required:
+    - answers
+    - question
+    type: object
+  responses.ErrorResponse:
+    properties:
+      error:
+        example: the error
+        type: string
+      message:
+        example: fail
+        type: string
+      status:
+        example: 500
+        type: integer
+    type: object
+  responses.RootResponse:
+    properties:
+      message:
+        example: success
+        type: string
+      status:
+        example: 200
+        type: integer
+    type: object
+  responses.RuleGeneralResponse:
+    properties:
+      message:
+        example: success
+        type: string
+      status:
+        example: 200
+        type: integer
+    type: object
+  responses.RuleResponse:
+    properties:
+      data:
+        $ref: '#/definitions/models.Rule'
+      message:
+        example: success
+        type: string
+      status:
+        example: 200
+        type: integer
+    type: object
+  responses.RulesResponse:
+    properties:
+      data:
+        items:
+          $ref: '#/definitions/models.Rule'
+        type: array
+      message:
+        example: success
+        type: string
+      results:
+        example: 1
+        type: integer
+      status:
+        example: 200
+        type: integer
+    type: object
+host: localhost:9090
+info:
+  contact: {}
+  description: Toto Game Rule Service API in Go using Gin framework.
+  title: Toto Game Rule Service API
+  version: "1.0"
+paths:
+  /:
+    get:
+      description: Responds with "Hello world" message.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.RootResponse'
+      summary: Test root
+      tags:
+      - root
+  /rules:
+    get:
+      description: Responds with the list of all rules as JSON.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.RulesResponse'
+      summary: Get rules
+      tags:
+      - rules
+    post:
+      consumes:
+      - application/json
+      description: Responds with the rule created of as JSON.
+      parameters:
+      - description: Add rule
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/models.Rule'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/responses.RuleResponse'
+      summary: Add rule
+      tags:
+      - rules
+  /rules/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Responds with a message as JSON
+      parameters:
+      - description: Rule ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.RuleGeneralResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/responses.ErrorResponse'
+      summary: Delete rule by ID
+      tags:
+      - rules
+    get:
+      consumes:
+      - application/json
+      description: Responds with a rule as JSON
+      parameters:
+      - description: Rule ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.RuleResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/responses.ErrorResponse'
+      summary: Get rule by ID
+      tags:
+      - rules
+    put:
+      consumes:
+      - application/json
+      description: Responds with a rule as JSON
+      parameters:
+      - description: Rule ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Rule
+        in: body
+        name: rule
+        required: true
+        schema:
+          $ref: '#/definitions/models.Rule'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.RuleResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/responses.ErrorResponse'
+      summary: Update rule
+      tags:
+      - rules
+swagger: "2.0"
